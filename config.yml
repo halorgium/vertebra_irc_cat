@@ -6,6 +6,12 @@ log_path: :error
 pid_path: tmp/ircbot.pid
 actor_path: actors
 herault_jid: herault@localhost/herault
+default_resources: -
+- "/ircnet/freenode"
+- "/channel/halorgium"
 actor_path: lib
 actors:
- - vertebra_irc_cat/actors/bot
+  vertebra_irc_cat/actors/bot:
+  - "irc.freenode.net"
+  - 6667
+  - "test-foobar"
